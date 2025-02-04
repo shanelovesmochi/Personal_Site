@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 60%;
+    height: 800px;
+    margin: 5em auto;
+}
+
+header {
+    border-top: 0px;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+  }
+  
+  /* classify成nav-title的部分的  单独设置 */
+  a.nav-title,
+  a.nav-title:visited {
+    color: black;
+    text-decoration: none;
+    line-height: 2rem;
+  }
+
+  body {
+    color: rgb(11, 18, 57);
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;  
+  }

@@ -1,13 +1,23 @@
-/* header，和下面的下划线 */
 header {
-  border-top: 0px;
+  border-top: 0;
   border-bottom: 1px solid #aaa;
 
   display: flex;
-  justify-content: space-between; /* 将两个链接分布在两端 */
-  align-items: center; /* 垂直居中对齐 */
-  padding: 10px; /* 内边距，调整 header 周围的空隙 */
+  justify-content: space-between; /* 左右对齐 */
+  align-items: center; /* 垂直居中 */
+  padding: 10px;  /* 内边距，调整 header 周围的空隙 */
 }
+
+/* 定义div框起来的部分 */
+.nav-links {
+  margin-left: auto; /* 让这个 div 靠右对齐 */
+  display: flex;
+  gap: 2em; /* 让 Assignment_1 和 Assignment_2 之间有一点间距 */
+}
+
+
+
+
 
 /* classify成nav-title的部分的  单独设置 */
 a.nav-title,

@@ -12,7 +12,7 @@ header {
 .nav-links {
   margin-left: auto; /* 让这个 div 靠右对齐 */
   display: flex;
-  gap: 2em; /* 让 Assignment_1 和 Assignment_2 之间有一点间距 */
+  gap: 2px; /* 让 Assignment_1 和 Assignment_2 之间有一点间距 */
 }
 
 

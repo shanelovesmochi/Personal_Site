@@ -1,0 +1,100 @@
+header {
+  border-top: 0;
+  border-bottom: 1px solid #aaa;
+
+  display: flex;
+  justify-content: space-between; /* 左右对齐 */
+  align-items: center; /* 垂直居中 */
+  padding: 10px;  /* 内边距，调整 header 周围的空隙 */
+}
+
+/* 定义div框起来的部分 */
+.nav-links {
+  margin-left: auto; /* 让这个 div 靠右对齐 */
+  display: flex;
+  gap: 2em; /* 让 Assignment_1 和 Assignment_2 之间有一点间距 */
+}
+
+
+
+
+
+/* classify成nav-title的部分的  单独设置 */
+a.nav-title,
+a.nav-title:visited {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+  line-height: 2rem;
+}
+
+
+/* 一个section下面间隔多少距离 */
+section{
+  padding-bottom: 1rem;
+}
+/* 每一个section都可以单独定义，只要加上名字section的id就好 */
+
+/* section#life-beijing {
+  padding-bottom: 10rem;
+}
+section#life-new-york {
+  padding-bottom: 10rem;
+} */
+
+/* shift alt a 码掉一整段代码
+   CTRL /码掉一行代码 */
+
+
+/* 整个body部分定义 */
+body {
+  background-color: rgb(230, 219, 202);
+  color: rgb(11, 18, 57);
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 64rem;
+
+}
+
+
+/* 这里是定义p字段的 */
+/* 比如这样：<p>Hi! I'm XiaofanZhu.</p> */
+#about p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+
+/* 这里是定义a字段的 */
+/* 但是a同时也是链接标签，不能随意修改 */
+#about a,
+a:visited {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid;
+  border-color: #ff8800;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+
+
+/* 这里是定义h2二级标题的 */
+/* h只是标题标签，和a不一样 */
+#projects h2 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16;
+  text-transform: uppercase;
+  font-weight: 600;
+}

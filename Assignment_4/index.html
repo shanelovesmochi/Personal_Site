@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Population Percentage of age above 60</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    
+    <!-- 自定义 CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header>
+        <a class="nav-title" href="../index.html">Back</a>
+    </header>
+
+    <select id="projectionSelect">
+        <option value="mercator">Mercator</option>
+        <option value="equalEarth">Equal Earth</option>
+        <option value="naturalEarth">Natural Earth</option>
+        <option value="equirectangular">Equirectangular</option>
+    </select>
+
+
+<!--     <div id="controls">
+        <button onclick="updateVisualization('schemeA')">Equal Interval</button>
+        <button onclick="updateVisualization('schemeB')">方案 B</button>
+        <button onclick="updateVisualization('schemeC')">方案 C</button>
+    </div> -->
+
+    <nav id="menu"></nav>
+    <div id="map"></div>
+    <div id='title' class="title">
+        <h1>Population Ageing</h1>
+        <h4>State - County - Census Tract</h4>
+        <hr></hr>
+        <p>The proportion of the population aged 60 and above reaches 10% of the total population, 
+            which is the standard for a country or region to enter an aging society (or aging population). 
+            I am using the S0101 Age and Sex dataset from the U.S. Census Bureau to analyze the percentage of 
+            the population aged 60 and above in each state. By calculating and mapping this percentage, I aim to 
+            identify states where the population is aging more significantly. This analysis helps assess whether local 
+            communities are demographically dynamic or experiencing an aging trend. To classify the data, because the 
+            data on the aging population is relatively concentrated, I use Natural 
+            Breaks (Jenks), which optimally groups similar values while maximizing the differences between classes. This 
+            method ensures that patterns in aging populations are more visually distinguishable, making it easier for the 
+            eye to interpret regional variations effectively.</p>
+        <hr></hr>
+        
+<!--         <hr>
+        <p>Click on census tract to check detailed information on its total population and the % of people ages above 60.</p>
+        <hr> -->
+
+        
+        <div id="state-legend" class="legend">
+            <h4>Natural Break--State</h4>
+            <p>State Data of Age Above 60 Percentage</p>
+            <div><span style="background-color: #250c4d"></span>27.5% +</div>
+            <div><span style="background-color: #6b237c"></span>25%-27.5%</div>
+            <div><span style="background-color: #a84178"></span>22.8%-25%</div>
+            <div><span style="background-color: #df6c62"></span>19.3%-22.8%</div>
+            <div><span style="background-color: #f1b481"></span>Less than 19.3%</div>
+            <div><span style="background-color: #f9ede4"></span>0% No Data</div>
+        </div>
+
+        <div id="county-legend" class="legend">
+            <h4>Natural Break--County</h4>
+            <p>County Data of Age Above 60 Percentage</p>
+            <div><span style="background-color: #250c4d"></span>39.2% +</div>
+            <div><span style="background-color: #6b237c"></span>31.5%-39.2%</div>
+            <div><span style="background-color: #a84178"></span>26.4%-31.5%</div>
+            <div><span style="background-color: #df6c62"></span>21.4%-26.4%</div>
+            <div><span style="background-color: #f1b481"></span>Less than 21.4%</div>
+            <div><span style="background-color: #f9ede4"></span>0% No Data</div>
+        </div>
+
+        <div id="census-legend" class="legend">
+            <h4>Natural Break--Census Tract</h4>
+            <p>County Data of Age Above 60 Percentage</p>
+            <div><span style="background-color: #250c4d"></span>52.7% +</div>
+            <div><span style="background-color: #6b237c"></span>33.5%-52.7%</div>
+            <div><span style="background-color: #a84178"></span>24.5%-33.5%</div>
+            <div><span style="background-color: #df6c62"></span>16.3%-24.5%</div>
+            <div><span style="background-color: #f1b481"></span>Less than 16.3%</div>
+            <div><span style="background-color: #f9ede4"></span>0% No Data</div>
+        </div>
+        
+    </div>
+    <script type='text/javascript' src="map.js"></script>
+
+</body>
+</html>

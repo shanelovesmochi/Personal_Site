@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>NYC Bike Accident Heatmap</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    
+    <!-- 自定义 CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a class="nav-title" href="../index.html">Back</a>
+    </header>
+
+    <!-- 侧边菜单 -->
+    <nav id="menu"></nav>
+
+    <!-- 地图容器 -->
+    <div id='map'></div>
+
+    <!-- 标题 & 说明 -->
+    <div id='title' class="title">
+        <h1>Geographical Distribution of Bike Accidents in NYC</h1>
+        <p>This interactive map visualizes bike accident locations in New York City using a heatmap. The data is based on reported accidents involving bicycles, providing insights into high-risk areas.</p>
+        <P>I use google colab and python to initially process the data: filter, sum, csv to geojson, etc. The geojson files are visualized in visual studio code. Here are the sources.</p>
+        <p>Motor Vehicle Collisions - Person</p>
+        <p>https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Person/f55k-p6yu/about_data</p>
+        <p>2025-01 City Bike Data</p>
+        <p>https://citibikenyc.com/system-data</p>                 
+        
+        <hr>
+
+        <!-- 热力图图例 -->
+        <div id="heatmap-legend" class="legend2">
+            <h4>Bike Accident Density</h4>
+            <p><em>Zoom in and see where did the accidents happened.</em></p>
+            <div><span style="background-color: rgba(33, 102, 172, 0.5)"></span> Low Accident Count</div>
+            <div><span style="background-color: rgba(255, 255, 0, 0.9)"></span> Medium Accident Count</div>
+            <div><span style="background-color: rgba(255, 0, 0, 1)"></span> High Accident Count</div>
+            <div><span style="background-color: rgba(255, 255, 255, 0.749)"></span> Accident Location(zoom in and see)</div>
+        </div>
+
+        <div id="bike-legend" class="legend2">
+            <h4>City Bike NYC</h4>
+            <p><em>Click on to see departures and returns.</em></p>
+            <div><span style="background-color: #f5abab88"></span>&#8594;<span style="background-color: #b40909c9; height:20px; width:20px"></span> Size indicates number of use</div>
+        </div>
+    </div>  
+
+    <!-- 加载 JavaScript -->
+    <script type='text/javascript' src="map.js"></script>
+</body>
+</html>

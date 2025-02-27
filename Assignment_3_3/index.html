@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Population Percentage of age above 60</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    
+    <!-- 自定义 CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header>
+        <a class="nav-title" href="../index.html">Back</a>
+    </header>
+
+    <select id="projectionSelect">
+        <option value="mercator">Mercator</option>
+        <option value="equalEarth">Equal Earth</option>
+        <option value="naturalEarth">Natural Earth</option>
+        <option value="equirectangular">Equirectangular</option>
+    </select>
+
+
+<!--     <div id="controls">
+        <button onclick="updateVisualization('schemeA')">Equal Interval</button>
+        <button onclick="updateVisualization('schemeB')">方案 B</button>
+        <button onclick="updateVisualization('schemeC')">方案 C</button>
+    </div> -->
+
+    <nav id="menu"></nav>
+    <div id="map"></div>
+    <div id='title' class="title">
+        <h1>Population Ageing</h1>
+        <p>The proportion of the population aged 60 and above reaches 10% of the total population, 
+            which is the standard for a country or region to enter an aging society (or aging population). 
+            Age data base is preprocessed in Google Colab:</p>
+        <p>https://colab.research.google.com/drive/1D7x0WqWoJw8Uw1z7h_-YycUQ8s-R9IBA?usp=sharing</p>
+        
+        <hr>
+        <p>Click on census tract to check detailed information on its total population and the % of people ages above 60.</p>
+        <hr>
+
+        
+        <div id="legend" class="legend">
+            <h4>Quantiles or Equal Count</h4>
+            <p>Population Percentage of age above 60</p>
+            <div><span style="background-color: #250c4d"></span>29.9% +</div>
+            <div><span style="background-color: #6b237c"></span>23.5%-29.9%</div>
+            <div><span style="background-color: #a84178"></span>19.56%-23.5%</div>
+            <div><span style="background-color: #df6c62"></span>15.2%-19.56%</div>
+            <div><span style="background-color: #f1b481"></span>Less than 15.2%</div>
+            <div><span style="background-color: #f9ede4"></span>0% No Data</div>
+        </div>
+        
+    </div>
+    <script type='text/javascript' src="map.js"></script>
+
+</body>
+</html>

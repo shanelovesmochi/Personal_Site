@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- 一个页面就一个head 一个body -->
+  <!-- 这些是确保网页正确显示 -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 作者信息 -->
+    <meta name="author" content="XiaofanZhu" />
+    <!-- 搜索引擎网页关键词，但Google已经不怎么依赖关键词了，更多看网页内容 -->
+    <meta
+      name="keywords"
+      content="mapping, storytelling, urban design, new york"
+    />
+
+    <!-- 从网上链接字体资源包 -->
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" herf="https://fonts.googleapis.com /">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- 只有body的部分会显示在网页上，head这些资源的加载会影响页面的外观和功能，但不会直接显示在页面上 -->
+  <!-- head和body之间有个分割线 -->
+  <body>
+    <header>
+      <a
+        class="nav-title"
+        href="./Portfolio_2/index.html"
+        >XZ Portfolio</a
+      >
+      
+      <!-- 用div包裹assignment，和上面的区分开 -->
+      <div class="nav-links">
+      <div class="nav-links">
+        <a class="nav-title" href="./Assignment_1/index.html">Assi1</a>
+        <a class="nav-title" href="./Assignment_2/index.html">Assi2</a>
+        <a class="nav-title" href="./Assignment_2_2/index.html">Assi2_2</a>
+        <a class="nav-title" href="./Assignment_3/index.html">Assi3_1</a>
+        <a class="nav-title" href="./Assignment_3_2/index.html">Assi3_2</a>
+        <a class="nav-title" href="./Assignment_3_3/index.html">Assi3_3</a>
+        <a class="nav-title" href="./Assignment_4/index.html">Assi4</a>
+      </div>
+
+
+    </header>
+ 
+
+
+
+    <!-- 一个页面最好就一个main，不然容易引起混乱 -->
+    <!-- 可以用多个section代替多个main  -->
+    <main>
+
+      <section id="about">
+        <h2>Hi! I'm XiaofanZhu.</h2>
+        <p>
+          I am a Master student of Urban Design at Cornell University in the AAP college.
+          <a href="https://aap.cornell.edu/" target="_blank">AAP</a>.
+          Previously, I obtained my bachelor's degree at Beijing University of Technology.
+          <a href="https://en.wikipedia.org/wiki/Beijing_University_of_Technology" target="_blank"
+            >Beijing University of Technology</a
+          >
+        </p>
+      </section>
+
+      <section id="life-beijing">
+        <h2>My Life in Beijing</h2>
+        <div class="life">
+          <img class="life-cat" src="./img/life_cat.JPG" alt="my ginger cat photo" width="500" height="auto" />
+          <p class="life-title">Her name is RICE, 3 years old now.</p>
+          <p class="life-description">
+            She always want snacks. Luckily she is an athlete, loves running around, keeping her from expanding too much.
+            She was born with kidney disease, so I spend quite a long time learning how to take care of her. And she is very healthy now.
+          </p>
+        </div>
+      </section>
+      
+      <section id="life-new-york">
+        <h2>My Life in New York</h2>
+        <div class="life">
+          <img class="life-chef" src="./img/life_chef.JPG" alt="my chef picture" width="500" height="auto" />
+          <p class="project-title">I always love to cook</p>
+          <p class="project-description">
+            Just trying to maintain a healthy lifestyle here.
+          </p>
+        </div>
+      </section>
+      
+
+    </main>
+
+
+    <!-- 页脚 -->
+    <footer>
+      <p class="footer-text">
+        Send me a <a href="mailto:zhuxiaofan8@outlook.com">email</a> 
+        <!-- or visit <a href="https://juanfrans.com/">my site</a>. | -->
+      </p>
+    </footer>
+
+
+  </body>
+</html>

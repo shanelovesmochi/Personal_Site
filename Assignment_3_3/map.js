@@ -5,9 +5,9 @@ window.onload = function () {
         container: 'map',
         style: 'mapbox://styles/zhuxiaofan/cm6jjln1800bt01qqcqamed19',
         center: [-73.935242, 40.730610], // NYC
-        zoom: 10,
-        maxZoom: 15,
-        minZoom: 4,
+        zoom: 3,
+        maxZoom: 6,
+        minZoom: 2,
         projection: 'mercator'
     });
 
@@ -19,7 +19,7 @@ document.getElementById('projectionSelect').addEventListener('change', function 
 
 
 map.on('load', function () {
-    fetch("data/Age_Census_merged_data.geojson")
+    fetch("data/Merged_World_Simplify.geojson")
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -49,16 +49,16 @@ map.on('load', function () {
             source: 'census_data',
             paint: {
                 'fill-color': [
-                    'step', ['get', 'Total Percent age 60 above'],
+                    'step', ['get', 'PERCENTAGE'],
                     '#f1b481',
-                    15.2, '#df6c62',
-                    19.56, '#a84178',
-                    23.5, '#6b237c',
-                    29.2, '#250c4d',
+                    3.6, '#df6c62',
+                    7.1, '#a84178',
+                    15.7, '#6b237c',
+                    29.5, '#250c4d',
                 ],
                 'fill-opacity': [
                     'case',
-                    ['==', ['get', 'Total Percent age 60 above'], 0], 0.1,  // If 0, almost transparent
+                    ['==', ['get', 'PERCENTAGE'], 0], 0.1,  // If 0, almost transparent
                     0.9  // Default opacity for all other values
                 ],
                 'fill-outline-color': '#ffffff'
@@ -72,9 +72,9 @@ map.on('load', function () {
             new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
                 .setHTML(`
-                    <h4>Census Tract: ${props.GEOID}</h4>
-                    <p>Total Population: ${props["Total population"] || "N/A"}</p>
-                    <p>Percent Age 60 Above: ${props["Total Percent age 60 above"] || "N/A"}%</p>
+                    <h4>Country: ${props["NAME"]}</h4>
+                    <p>Total Population: ${props["NUM"] || "N/A"}</p>
+                    <p>Percent Age 60 Above: ${props["PERCENTAGE"] || "N/A"}%</p>
                 `)
                 .addTo(map);
         });

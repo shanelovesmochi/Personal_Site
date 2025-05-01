@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- 一个页面就一个head 一个body -->
+  <!-- 这些是确保网页正确显示 -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 作者信息 -->
+    <meta name="author" content="XiaofanZhu" />
+    <!-- 搜索引擎网页关键词，但Google已经不怎么依赖关键词了，更多看网页内容 -->
+    <meta
+      name="keywords"
+      content="mapping, storytelling, urban design, new york"
+    />
+
+    <!-- 从网上链接字体资源包 -->
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" herf="https://fonts.googleapis.com /">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- 只有body的部分会显示在网页上，head这些资源的加载会影响页面的外观和功能，但不会直接显示在页面上 -->
+  <!-- head和body之间有个分割线 -->
+
+  <body>
+    <header>
+      <a class="nav-title" href="../index.html">Back</a>
+    </header>
+ 
+
+    <!-- 一个页面最好就一个main，不然容易引起混乱 -->
+    <!-- 可以用多个section代替多个main  -->
+    <main>
+
+      <section id="about">
+        <h2>Lead Pollution Sample In NYC Tap Water</h2>
+        <p>
+          This project investigates the presence and distribution of lead contamination in New York City tap water, with a focus on the borough of Queens. Using public water testing data, I analyzed samples collected from 2014 to 2023, identifying instances where lead levels exceeded the EPA’s action threshold of 15 µg/L.
+
+The analysis begins with a borough-level comparison, which shows that Queens has consistently reported a high number of lead exceedance cases over the years. A distribution analysis of Queens samples reveals that while most lead levels are low, a significant number still surpass the safe limit. Yearly boxplots highlight fluctuations in contamination severity, with certain years showing higher medians and more outliers.
+
+To understand where these risks are concentrated, I mapped exceedances over time by zip code, revealing localized clusters and persistent hotspots. A combined bar and line chart further compares exceedance counts with total sampling frequency across zip codes. This helps distinguish between truly high-risk areas and those with more extensive testing.
+
+Overall, this project provides a clearer picture of when, where, and how lead contamination occurs in Queens, offering a foundation for further investigation and policy response.
+</p>
+
+        <p>
+          The
+          <a href="https://colab.research.google.com/drive/1s1Z19llnQdoMhb36DtqKHGortZuk1fSw?usp=sharing" target="_blank"
+            >Google Colab</a> link is here.
+        </p>
+      </section>
+
+
+
+      
+        <!-- 1 Borough Trends -->
+
+        <div class="chart">
+          <h1>Tap Lead Pollution in NYC</h1>
+          <img src="./img/borough_trend.png" alt="Lead exceedance by borough and year" width="600" />
+          <p class="chart-caption">This line chart visualizes the number of water samples that exceeded 15 µg/L of lead content in each borough, grouped by year. The threshold of 15 µg/L is significant because it matches the EPA's action level for lead in drinking water. Observing temporal patterns and spatial disparities — for example, certain boroughs may consistently exhibit more exceedances, can indicate possible infrastructure or environmental concerns.</p>
+        </div>
+
+        <!-- 2 Histogram of Queens -->
+        <div class="chart">
+          <h1>Distribution Overview of Queens</h1>
+          <img src="./img/queens_histogram.png" alt="Lead level distribution in Queens" width="600" />
+          <p class="chart-caption">Most samples in Queens are safe, but some exceed the EPA threshold. Zooming in to Queens Borough. This histogram shows the distribution of lead levels in Queens tap water samples (excluding extreme outliers). Gray bars represent samples within safe limits, while red bars show samples exceeding the EPA action level of 15 µg/L. Most samples are low, but the red bars highlight ongoing concerns in some areas. Extreme data > 100 are filtered out.</p>
+        </div>
+
+        <!-- 3 Boxplot by Year -->
+        <div class="chart">
+          <h1>Yearly Boxplot of Lead in Queens</h1>
+          <img src="./img/queens_boxplot.png" alt="Yearly lead boxplot in Queens" width="600" />
+          <p class="chart-caption">Yearly distribution of lead levels reveals spikes and outliers in specific years. Lead levels in Queens varied significantly across years, with higher median values and more extreme outliers between 2015–2018. A noticeable decline appears in 2022–2023, suggesting possible improvements in water quality or testing patterns.</p>
+        </div>
+
+        <!-- 4 Scatterplot by Zipcode -->
+        <div class="chart">
+          <h1>Time Series Scatter Plot by Zipcode</h1>
+          <img src="./img/zipcode_scatter.png" alt="Lead level scatter plot colored by zipcode" width="600" />
+          <p class="chart-caption">Each dot represents an exceedance, colored by zip code to show neighborhood variation over time. The chart shows how high lead samples were distributed over time and location.</p>
+        </div>
+
+        <!-- 5 Bar + Line by Zipcode -->
+        <div class="chart">
+          <h1> Zipcode-level Comparison</h1>
+          <img src="./img/zipcode_bar_line.png" alt="Lead exceedance and sampling count by zipcode" width="600" />
+          <p class="chart-caption">Comparing exceedances and total samples by zip code helps separate risk from sampling bias. I compared the number of lead exceedance cases (>15 µg/L) with the overall sampling counts by zip code in Queens. I found that zip codes with more exceedances also had more samples, suggesting that higher exceedance counts may reflect more frequent testing rather than worse contamination alone.
+
+          </p>
+        </div>
+      </section>
+
+      
+
+    </main>
+  </body>
+</html>

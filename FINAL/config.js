@@ -188,7 +188,7 @@ divChapter13_1 = `
     
     <div style="width: 100%;">
       <h3 style="font-size: 1.8em; margin-top: 0.5em; margin-bottom: 0.4em; text-align: left; text-transform: uppercase;">A completely uninhabitable place</h3>
-      <p>Each dot represents the test result of a specific compound, normalized by its RURR standard. Dots above the black RURR line indicate values exceeding acceptable thresholds. </p>
+      <p>Each dot represents the test result of a specific compound, normalized by its RURR standard. Dots above the black RURR line indicate values exceeding acceptable thresholds.</p>
       <p>RURR: Restricted Use - Restricted Residential Soil Cleanup Objectives. </p>
       <p>RURR applies to residential sites with restrictions—such as engineered barriers or land-use controls. It's less strict than full residential standards, but more protective than commercial or industrial ones. Commonly used in brownfield projects like Willets Point, where housing is allowed but with environmental safeguards.</p>
       
@@ -207,10 +207,31 @@ divChapter13_1 = `
 
         <p><strong>Benzene</strong><br>
         Several exceedance points are 10 times or more above RURR. Benzene is a well-established carcinogen linked to leukemia. Its repeated exceedance suggests a persistent and dangerous presence in the local environment.</p>
+
+        <p><strong>SVOC (Semi-Volatile Organic Compounds)</strong></p>
+        <p><strong>Benzo(a)pyrene</strong><br>
+        Most samples exceed the RURR standard by 10–50 times. A highly potent polycyclic aromatic hydrocarbon (PAH), Benzo(a)pyrene is one of the most toxic PAHs, with strong carcinogenic and mutagenic properties.</p>
+
+        <p><strong>Dibenz(a,h)anthracene</strong><br>
+        Test points show exceedances ranging from 10 times to nearly 100 times RURR. This SVOC is classified as a probable human carcinogen and shares toxicity pathways similar to Benzo(a)pyrene.</p>
+
+        <p><strong>Chrysene</strong><br>
+        A large proportion of data points exceed RURR by 5–30 times. Though slightly less potent than the two above, Chrysene is still a suspected carcinogen and indicates a significant environmental health risk.</p>
+
+        <p><strong>METALS</strong></p>
+        <p><strong>Cadmium</strong><br>
+        Several test values exceed RURR by 10–50 times. Cadmium is a toxic metal known to cause kidney damage and is classified as a human carcinogen.</p>
+
+        <p><strong>Arsenic</strong><br>
+        Most values range from 5 to 20 times above RURR. Arsenic is a potent toxin and carcinogen associated with skin, lung, and bladder cancers. Chronic exposure even at low levels poses serious risks.</p>
+
+        <p><strong>Lead</strong><br>
+        While the median remains close to RURR, some samples exceed the standard by 5–15 times. Lead exposure is particularly harmful to children, causing irreversible neurological damage. Its presence above safe limits warrants immediate concern.</p>
       </div>
     </div>
   </div>
 `;
+
 
 let divChapteriterviewbefore = 
   "<h1 style='max-width:900px; margin-left:auto; margin-right:auto; text-align:center; line-height:2;'>And what did local residents say?</h1>" +
